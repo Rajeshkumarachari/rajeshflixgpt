@@ -4,6 +4,8 @@ import Header from "./Header";
 const Login = () => {
   const [isSignInForm, setSignInForm] = useState(true);
 
+  const handleButtonClick = () => {};
+
   const toggleSignInForm = () => {
     setSignInForm(!isSignInForm);
   };
@@ -39,7 +41,10 @@ const Login = () => {
           placeholder="Password"
           className="p-4 my-4 w-full bg-gray-800 rounded-sm "
         />
-        <button className="p-4 my-4 bg-red-700 w-full rounded-sm ">
+        <button
+          className="p-4 my-4 bg-red-700 w-full rounded-sm "
+          onClick={handleButtonClick}
+        >
           {isSignInForm ? "Sign in" : "Sign up"}
         </button>
         <h1 className=" text-gray-500 text-lg ">
